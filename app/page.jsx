@@ -1,4 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
+
 import { useState, useEffect, useRef } from "react";
 
 // ─── TRANSLATIONS ────────────────────────────────────────────────────────────
@@ -75,9 +77,9 @@ const T = {
   }
 };
 
-const lang = (l, key, fallback="en") => {
+const lang = (l , key , fallback="en") => {
   const keys = key.split(".");
-  let cur = T[l] || T[fallback];
+  let cur = T[l]  || T[fallback];
   for (const k of keys) { cur = cur?.[k]; }
   if (cur === undefined) { cur = T[fallback]; for (const k of keys) cur = cur?.[k]; }
   return cur;

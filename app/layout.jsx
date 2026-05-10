@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "CallsChat | Modern Calling & Messaging Platform",
   description:
     "CallsChat is an upcoming modern communication platform focused on fast messaging, smooth voice calls, and a beautiful user experience.",
@@ -20,9 +20,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}) {
   return (
     <html
       lang="en"
